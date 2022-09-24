@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid black; */
+}
+
+:root {
+  --bg-color: #202020;
+  --accent: #ec1d24;
+  --text-color: rgb(227, 217, 217);
+  --xlg-font-size: 40px;
+  --lg-font-size: 20px;
+  --reg-font-size: 16px;
+  --sm-font-size: 10px;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--bg-color);
+}
+
+#__next {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.link {
+  color: rgb(205, 190, 190);
+}
+
+.link:hover {
+  color: white;
+}

@@ -1,0 +1,53 @@
+.base_layout {
+  --header-height: 60px;
+  --footer-height: 20px;
+  --content-height: calc(100vh - (var(--header-height) + var(--footer-height)));
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    auto minmax(var(--content-height), 1fr)
+    auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  height: var(--header-height);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    70deg,
+    rgba(255, 0, 0, 0.795),
+    rgba(255, 255, 255, 0.818),
+    rgba(0, 0, 255, 0.791)
+  );
+}
+
+.content {
+  grid-area: content;
+  overflow: auto;
+}
+
+.header .title {
+  font-size: var(--xlg-font-size);
+  letter-spacing: 10px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 0 rgb(245, 9, 9), -1px -1px 0 rgb(224, 14, 14),
+    1px -1px 0 rgb(249, 8, 8), -1px 1px 0 rgb(241, 7, 7),
+    1px 1px 0 rgb(244, 10, 10);
+}
+
+.footer {
+  height: var(--footer-height);
+  padding: 10px;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

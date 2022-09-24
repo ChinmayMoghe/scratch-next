@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page_pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+.current_page {
+  background-color: rgb(211, 186, 186);
+}
+
+.page_pill:hover:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page_pill:hover {
+  cursor: pointer;
+}

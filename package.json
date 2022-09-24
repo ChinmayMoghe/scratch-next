@@ -1,0 +1,38 @@
+{
+  "name": "scratch-next",
+  "version": "1.0.0",
+  "description": "scratch nextJS app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChinmayMoghe/scratch-next.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChinmayMoghe/scratch-next/issues"
+  },
+  "homepage": "https://github.com/ChinmayMoghe/scratch-next#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prebuild": "npm run generate:sprite",
+    "generate:sprite": "svg-sprite -s --symbol-dest public/images/icons/ --symbol-sprite sprite.svg public/images/icons/*.svg"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
+    "classnames": "^2.3.2",
+    "next": "^12.2.5",
+    "next-redux-wrapper": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "svg-sprite": "^1.5.4"
+  }
+}
