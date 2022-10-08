@@ -1,0 +1,10 @@
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_name {
+  font-size: var(--lg-font-size);
+  color: var(--text-color);
+}

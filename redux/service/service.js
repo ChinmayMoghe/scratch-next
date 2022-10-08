@@ -5,7 +5,7 @@ export const marvelAPI = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "/api/",
   }),
-  extractRehydrationInfo(action, { reducerPath }) {
+extractRehydrationInfo(action, { reducerPath }) {
     if (action.type === HYDRATE) {
       return action.payload[reducerPath];
     }

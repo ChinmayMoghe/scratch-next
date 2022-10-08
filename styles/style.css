@@ -30,6 +30,7 @@ body {
 
 .link {
   color: rgb(205, 190, 190);
+  text-decoration: none;
 }
 
 .link:hover {

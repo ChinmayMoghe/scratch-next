@@ -1,0 +1,51 @@
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 120deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 330deg);
+  }
+}
+
+.tesseract {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  perspective: 450em;
+  transform-origin: center center 0;
+  animation: rotate 10s ease-out forwards infinite;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #74d4f79b;
+  background-size: 100% 3px;
+  box-shadow: inset 0px 0px 20px 0px #62cff669;
+}
+
+.face_1 {
+  transform: translateZ(50px);
+}
+
+.face_2 {
+  transform: translateZ(-50px);
+}
+
+.face_3 {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.face_4 {
+  transform: rotateX(90deg) translateZ(-50px);
+}
+
+.face_5 {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.face_6 {
+  transform: rotateY(90deg) translateZ(-50px);
+}

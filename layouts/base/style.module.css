@@ -44,6 +44,7 @@
 }
 
 .footer {
+  margin: 20px 40px;
   height: var(--footer-height);
   padding: 10px;
   grid-area: footer;

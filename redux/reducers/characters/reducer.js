@@ -2,15 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 
 const initialState = {
-  characters: [],
+  character: {},
+  page: 1,
+  offset: 20,
 };
 
 export const charactersSlice = createSlice({
   name: "characters",
   initialState,
   reducers: {
-    setCharacters: (state, action) => {
-      state.characters = action.payload;
+    setPage: (state, action) => {
+      state.page = action.payload;
     },
   },
   extraReducers: {
@@ -23,6 +25,6 @@ export const charactersSlice = createSlice({
   },
 });
 
-export const { setCharacters } = charactersSlice;
+export const { setPage } = charactersSlice.actions;
 
 export default charactersSlice.reducer;
